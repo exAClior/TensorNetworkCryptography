@@ -6,9 +6,9 @@
 // Global information configuration
 #let s = (s.methods.info)(
   self: s,
-  title: [Touying for HKUSTGZ: Customize Your Slide Title Here],
-  subtitle: [Customize Your Slide Subtitle Here],
-  author: [Authors],
+  title: [Tensor Network Attack on Cryptographic Protocols],
+  subtitle: [A paper review],
+  author: [Yusheng Zhao],
   date: datetime.today(),
   institution: [HKUST(GZ)],
 )
@@ -21,24 +21,29 @@
 #let (slide, empty-slide, title-slide, outline-slide, new-section-slide, ending-slide) = utils.slides(s)
 #show: slides.with()
 
-#outline-slide()
+// #outline-slide()
+= Outline
 
-= The section I
+= Previous work @aizpurua2023hacking
 
-== Slide I / i
+Improved Variational Quantum Attack Algorithm on Cryptographic Protocols
+1. Reduced number of qubits and circuit depth
+2. Used coordinate transformation to reduce Barren Plateau
+3. Generalized this approach to work with symmetric and assymetric key encryption.
 
-Slide content.
+Encodes a known ciphertext as the ground state of a classical Hamiltonian.
 
-== Slide I / ii
+How can I do encoding without knowing the ground state?
+How does secret key correspond to variational parameter for the ground state of this classical Hamiltonian?
 
-Slide content.
+= Tensor Network Approach @aizpurua2024hacking
 
-= The section II
+Assumes know the plain text and corresponding cipher text, want to extract the secret key.
 
-== Slide II / i
+What is the benefit of using tensor network? It is not faster! Only fewer iterations. Why should we care about the number of iterations if the total time is longer?
 
-Slide content.
+"More complex the cipher and the longer the key, the more compelx the best hacking method is." @aizpurua2024hacking, in what sense is VQAA more complex than MPS approach? 
 
-== Slide II / ii
 
-Slide content.
+
+#bibliography("refs.bib")
