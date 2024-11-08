@@ -1,17 +1,25 @@
 #import "@preview/touying:0.4.2": *
-#import "@preview/touying-simpl-hkustgz:0.1.0" as hkustgz-theme
+#import "@preview/touying-simpl-hkustgz:0.1.1" as hkustgz-theme
 
 #let s = hkustgz-theme.register()
+
+#let my_logo = image("img/tensorkit.svg", width: 1.5em)
 
 // Global information configuration
 #let s = (s.methods.info)(
   self: s,
   title: [Tensor Network Attack on Cryptographic Protocols],
   subtitle: [A paper review],
-  author: [Yusheng Zhao],
+  authors: [Yusheng Zhao],
   date: datetime.today(),
   institution: [HKUST(GZ)],
+  others: (
+    (content: my_logo, dx: 1.0em, dy: 0.0em), 
+    (content: my_logo, dx: 0.0em, dy: 0.0em),
+    (content: my_logo, dx: 0.0em, dy: 0.0em),
+  ),
 )
+
 
 // Extract methods
 #let (init, slides) = utils.methods(s)
@@ -19,12 +27,12 @@
 
 // Extract slide functions
 #let (slide, empty-slide, title-slide, outline-slide, new-section-slide, ending-slide) = utils.slides(s)
-#show: slides.with()
+#show: slides.with(title-slide:true)
 
-// #outline-slide()
-= Outline
 
-= Previous work @aizpurua2023hacking
+= Previous work @aizpurua2023hacking  
+
+== New paper 
 
 Improved Variational Quantum Attack Algorithm on Cryptographic Protocols
 1. Reduced number of qubits and circuit depth
@@ -46,4 +54,6 @@ What is the benefit of using tensor network? It is not faster! Only fewer iterat
 
 
 
-#bibliography("refs.bib")
+#ending-slide[
+  #bibliography("refs.bib")
+]
