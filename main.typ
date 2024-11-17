@@ -52,6 +52,14 @@ What is the benefit of using tensor network? It is not faster! Only fewer iterat
 
 "More complex the cipher and the longer the key, the more compelx the best hacking method is." @aizpurua2024hacking, in what sense is VQAA more complex than MPS approach? 
 
+Ok, there's the trend in Table III and Table II, but did they give explaination to why we observe this?
+
+
+Using MPS to represent probability distribution has two advantages @zhang2018unsupervised: 
+1. Stronger learning ability that grows with bond dimension (why? it is because of the vast amount of states representable by MPS with growing bond dimension and the efficient way of contracting MPS for computing probability distribution?)
+2. More efficient sampling method (how?)
+
+
 
 
 #ending-slide[
