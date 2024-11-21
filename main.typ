@@ -1,5 +1,6 @@
 #import "@preview/touying:0.4.2": *
 #import "@preview/touying-simpl-hkustgz:0.1.1" as hkustgz-theme
+#import "@preview/physica:0.9.3": *
 
 #let s = hkustgz-theme.register()
 
@@ -31,6 +32,22 @@
 
 
 = Previous work @aizpurua2023hacking  
+
+== Challenge
+
+$ket(arrow.t#super(baseline:-1em)[L])$
+
+== Resize Math
+
+#slide[
+#show math.equation: set text(10pt)
+$ x^ +1 = 0 $
+
+#show math.equation: set text(50pt)
+
+#grid(columns: (1fr, 1fr), $ x^2+1=0 $, $ x^2+2=0 $)
+]
+
 
 == New paper 
 
